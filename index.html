@@ -42,97 +42,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Becker Advogados Associados</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Placido & Freitas - Advogados Associados</title>
+    <!-- Bootstrap CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Custom CSS -->
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            color: #333;
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            background-color: #004080; /* Azul escuro profissional */
         }
         .navbar-brand {
             font-weight: bold;
-            font-size: 1.5rem;
+            color: #fff !important;
         }
-        .hero-section {
-            background: url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center;
+        .nav-link {
+            color: #fff !important;
+        }
+        .nav-link:hover {
+            color: #ffd700 !important; /* Dourado para hover */
+        }
+        .hero {
+            background-image: url('https://images.pexels.com/photos/5669602/pexels-photo-5669602.jpeg'); /* Imagem de justiça */
             background-size: cover;
+            background-position: center;
             color: white;
             padding: 150px 0;
             text-align: center;
         }
-        .hero-section h1 {
+        .hero h1 {
             font-size: 3rem;
-            font-weight: bold;
-        }
-        .hero-section p {
-            font-size: 1.25rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
         .section-title {
-            font-size: 2.5rem;
-            font-weight: bold;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #004080;
+        }
+        .service-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .team-member {
+            text-align: center;
             margin-bottom: 30px;
-            color: #1a3c6b;
+        }
+        .team-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        .contact-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: #004080;
+            color: white;
+            padding: 20px 0;
             text-align: center;
         }
-        .card {
-            transition: transform 0.3s;
-        }
-        .card:hover {
-            transform: translateY(-10px);
-        }
-        .contact-section {
-            background-color: #f8f9fa;
-            padding: 80px 0;
-        }
-        .footer {
-            background-color: #1a3c6b;
-            color: white;
-            padding: 40px 0;
-        }
-        .footer a {
-            color: #ffffff;
+        footer a {
+            color: #ffd700;
             text-decoration: none;
         }
-        .footer a:hover {
+        footer a:hover {
             text-decoration: underline;
         }
     </style>
 </head>
 <body>
+
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">Becker Advogados Associados</a>
+            <a class="navbar-brand" href="#">Placido & Freitas</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">Sobre</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">Serviços</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contato</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Sobre Nós</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#team">Equipe</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contato</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-section">
+    <section id="home" class="hero">
         <div class="container">
-            <h1>Excelência em Advocacia</h1>
-            <p>Soluções jurídicas personalizadas para você e sua empresa</p>
-            <a href="#contact" class="btn btn-primary btn-lg mt-3">Entre em Contato</a>
+            <h1>Placido & Freitas - Advogados Associados</h1>
+            <p>Defendendo seus direitos com excelência e dedicação.</p>
+            <a href="#contact" class="btn btn-light btn-lg">Entre em Contato</a>
         </div>
     </section>
 
@@ -142,11 +157,12 @@
             <h2 class="section-title">Sobre Nós</h2>
             <div class="row">
                 <div class="col-md-6">
-                    <p>A Becker Advogados Associados é um escritório de advocacia comprometido com a excelência no atendimento e na resolução de questões jurídicas. Com sede em Goiânia, oferecemos serviços de alta qualidade, combinando expertise técnica com um atendimento personalizado.</p>
-                    <p>Nossa equipe é formada por profissionais altamente qualificados, prontos para atuar em diversas áreas do direito, sempre com ética, transparência e dedicação.</p>
+                    <img src="https://images.pexels.com/photos/8348440/pexels-photo-8348440.jpeg" alt="Escritório de advocacia" class="img-fluid rounded">
                 </div>
                 <div class="col-md-6">
-                    <img src="https://images.unsplash.com/photo-1589829546156-9358d40b4960?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Escritório" class="img-fluid rounded">
+                    <p>A Placido & Freitas - Advogados Associados é um escritório de advocacia com sede em Caucaia, CE, especializado em oferecer soluções jurídicas personalizadas e eficazes para nossos clientes. Com CNPJ 20.489.240/0001-09, estamos comprometidos com a ética, transparência e resultados.</p>
+                    <p>Fundado por profissionais experientes, nosso escritório atende uma ampla gama de áreas do direito, garantindo assessoria completa desde a consulta inicial até a resolução do caso. Nossa missão é proteger os interesses de indivíduos e empresas com integridade e profissionalismo.</p>
+                    <p>Localizado na Rua 15 de Outubro, 1310 - Novo Pabussu, Caucaia - CE, CEP 61600-272, estamos prontos para atender você com a dedicação que merece.</p>
                 </div>
             </div>
         </div>
@@ -157,98 +173,123 @@
         <div class="container">
             <h2 class="section-title">Nossos Serviços</h2>
             <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 text-center">
-                        <div class="card-body">
-                            <h5 class="card-title">Direito Empresarial</h5>
-                            <p class="card-text">Assessoria jurídica para empresas, contratos, fusões e aquisições.</p>
-                        </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <img src="https://images.pexels.com/photos/6077444/pexels-photo-6077444.jpeg" alt="Direito Civil" class="img-fluid mb-3 rounded">
+                        <h4>Direito Civil</h4>
+                        <p>Atuamos em questões contratuais, responsabilidade civil, direitos reais e obrigações. Nossa equipe analisa contratos, resolve disputas e garante o cumprimento de acordos, sempre priorizando soluções amigáveis quando possível, mas preparados para litígios judiciais se necessário.</p>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 text-center">
-                        <div class="card-body">
-                            <h5 class="card-title">Direito Trabalhista</h5>
-                            <p class="card-text">Defesa de empregadores e empregados em questões trabalhistas.</p>
-                        </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <img src="https://images.pexels.com/photos/5669602/pexels-photo-5669602.jpeg" alt="Direito de Família" class="img-fluid mb-3 rounded">
+                        <h4>Direito de Família</h4>
+                        <p>Especializados em divórcios, guarda de filhos, pensão alimentícia e inventários. Oferecemos suporte emocional e jurídico, mediando conflitos familiares com sensibilidade e eficiência para preservar o bem-estar de todos os envolvidos.</p>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 text-center">
-                        <div class="card-body">
-                            <h5 class="card-title">Direito Civil</h5>
-                            <p class="card-text">Atuação em contratos, família, sucessões e responsabilidade civil.</p>
-                        </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <img src="https://images.pexels.com/photos/6077447/pexels-photo-6077447.jpeg" alt="Direito Trabalhista" class="img-fluid mb-3 rounded">
+                        <h4>Direito Trabalhista</h4>
+                        <p>Defendemos empregados e empregadores em ações trabalhistas, rescisões contratuais, assédio moral e acidentes de trabalho. Nossa abordagem inclui negociações extrajudiciais e representações em audiências para assegurar direitos justos.</p>
                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <img src="https://images.pexels.com/photos/6077448/pexels-photo-6077448.jpeg" alt="Direito Penal" class="img-fluid mb-3 rounded">
+                        <h4>Direito Penal</h4>
+                        <p>Assistência em processos criminais, defesas em inquéritos policiais e ações penais. Focamos em estratégias de defesa robustas, análise de provas e garantia de direitos constitucionais para minimizar impactos negativos.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <img src="https://images.pexels.com/photos/8348440/pexels-photo-8348440.jpeg" alt="Direito Empresarial" class="img-fluid mb-3 rounded">
+                        <h4>Direito Empresarial</h4>
+                        <p>Consultoria para empresas em fusões, aquisições, contratos comerciais e recuperação judicial. Ajudamos na estruturação de negócios, compliance e resolução de disputas societárias para fomentar o crescimento sustentável.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <img src="https://images.pexels.com/photos/6077449/pexels-photo-6077449.jpeg" alt="Direito do Consumidor" class="img-fluid mb-3 rounded">
+                        <h4>Direito do Consumidor</h4>
+                        <p>Proteção contra práticas abusivas, indenizações por danos morais e materiais. Representamos consumidores em ações contra fornecedores, garantindo o cumprimento do Código de Defesa do Consumidor.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Nossa Equipe</h2>
+            <div class="row">
+                <div class="col-md-4 team-member">
+                    <img src="https://images.pexels.com/photos/3771088/pexels-photo-3771088.jpeg" alt="Advogado 1" class="team-img">
+                    <h5>Dr. João Placido</h5>
+                    <p>Sócio-fundador, especialista em Direito Civil e Empresarial com mais de 15 anos de experiência.</p>
+                </div>
+                <div class="col-md-4 team-member">
+                    <img src="https://images.pexels.com/photos/3771097/pexels-photo-3771097.jpeg" alt="Advogada 2" class="team-img">
+                    <h5>Dra. Maria Freitas</h5>
+                    <p>Sócia, expert em Direito de Família e Trabalhista, com foco em mediação e resolução de conflitos.</p>
+                </div>
+                <div class="col-md-4 team-member">
+                    <img src="https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg" alt="Advogado 3" class="team-img">
+                    <h5>Dr. Carlos Silva</h5>
+                    <p>Advogado associado, especializado em Direito Penal e Consumidor, com ênfase em defesas estratégicas.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-section">
+    <section id="contact" class="py-5 bg-light">
         <div class="container">
             <h2 class="section-title">Entre em Contato</h2>
             <div class="row">
                 <div class="col-md-6">
-                    <p><strong>Endereço:</strong><br>
-                    Avenida Deputado Jamel Cecílio, 3455, Sala 901, Fundo<br>
-                    Jd Goiás, Goiânia - GO, 74810-100</p>
-                    <p><strong>CNPJ:</strong> 12.522.187/0001-72</p>
-                    <p><strong>Telefone:</strong> (62) 1234-5678</p>
-                    <p><strong>Email:</strong> contato@beckeradvogados.com.br</p>
+                    <h4>Informações de Contato</h4>
+                    <p><strong>Endereço:</strong> Rua 15 de Outubro, 1310 - Novo Pabussu, Caucaia - CE, 61600-272</p>
+                    <p><strong>Telefone:</strong> (85) 1234-5678</p>
+                    <p><strong>Email:</strong> contato@placidoefreitas.com.br</p>
+                    <p><strong>CNPJ:</strong> 20.489.240/0001-09</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.0000000000005!2d-38.656000000000006!3d-3.736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM8KwNDMnNDUuNiJTIDM4wrAzOScwOS42Ilc!5e0!3m2!1spt-BR!2sbr!4v1690000000000!5m2!1spt-BR!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
                 <div class="col-md-6">
-                    <form>
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Nome</label>
-                            <input type="text" class="form-control" id="name" placeholder="Seu nome">
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Seu email">
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Mensagem</label>
-                            <textarea class="form-control" id="message" rows="5" placeholder="Sua mensagem"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Enviar</button>
-                    </form>
+                    <div class="contact-form">
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Nome</label>
+                                <input type="text" class="form-control" id="name" placeholder="Seu nome">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Seu email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Mensagem</label>
+                                <textarea class="form-control" id="message" rows="5" placeholder="Sua mensagem"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5>Becker Advogados Associados</h5>
-                    <p>Advocacia com excelência e compromisso.</p>
-                </div>
-                <div class="col-md-4">
-                    <h5>Links Úteis</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">Sobre</a></li>
-                        <li><a href="#services">Serviços</a></li>
-                        <li><a href="#contact">Contato</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h5>Contato</h5>
-                    <p>Avenida Deputado Jamel Cecílio, 3455, Sala 901, Fundo<br>
-                    Jd Goiás, Goiânia - GO, 74810-100<br>
-                    Email: contato@beckeradvogados.com.br</p>
-                </div>
-            </div>
-            <hr>
-            <p class="text-center">© 2025 Becker Advogados Associados. Todos os direitos reservados.</p>
+            <p>&copy; 2025 Placido & Freitas - Advogados Associados. Todos os direitos reservados.</p>
+            <p><a href="#home">Início</a> | <a href="#about">Sobre</a> | <a href="#services">Serviços</a> | <a href="#contact">Contato</a></p>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
